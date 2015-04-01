@@ -1,7 +1,7 @@
 // globally-available var to contain data
 	var asyncData;
 
-	// actual request
+	// run request function
 	asyncGet('timeframe.json');
 
 	function asyncGet(url) {
