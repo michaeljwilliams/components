@@ -29,7 +29,7 @@ function asyncGet(url) {
 			asyncData = JSON.parse(xhr.responseText);
 			// if text
 			// asyncData = xhr.responseText;
-		} else return;
+		}
 		// call a function that uses the data
 		useData(asyncData);
 	}
