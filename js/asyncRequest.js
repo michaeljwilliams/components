@@ -39,7 +39,7 @@ function asyncGet(url, json, fname) {
 				asyncData = xhr.responseText;
 			} else console.log('asyncGet(json) argument was not a bool');
 		} else {
-			console.log('No response received yet, retrying...');
+			console.log('asyncGet(' + url + '): No response received yet, retrying...');
 			return;
 		}
 		// call a function that uses the data
