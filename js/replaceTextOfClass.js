@@ -4,7 +4,7 @@ function replaceTextOfClass(inClass, newText) {
 	var allInstancesOfClass = document.getElementsByClassName(inClass);
 
 	// loop through array of classes
-	for (var i = 0; i < allInstancesOfClass.length; i++) {
+	for (var i = 0, j = allInstancesOfClass.length; i < j; i++) {
 		allInstancesOfClass[i].textContent = newText;
 	}
 }
