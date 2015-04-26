@@ -56,7 +56,7 @@ function asyncGet(url, json, cb, errcb) {
 			if (attempts >= 4) {
 				console.log('asyncGet(' + url + '): failed to load resource after ' + attempts + ' attempts. Will now call errcb if given.');
 				// call error cb with url
-				errcb(url);
+				if (errcb && typeof(errcb) === "function") errcb(url);
 			} else return; // return, browser will try again
 		}
 	}
