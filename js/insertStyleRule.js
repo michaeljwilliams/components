@@ -1,4 +1,4 @@
-// inserts style rule at end of first style tag
+// inserts style rule at end of last style tag
 // This is necessary to modify a pseudo element css rule because pseudo elements do not exist in the DOM.
 
 // example
