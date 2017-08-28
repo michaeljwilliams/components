@@ -1,8 +1,8 @@
 // example
 // asyncGet('timeframe.json', true, useAsyncData, errorCallback);
-// url of resource to request, json bool, function to call with asyncData
-// json bool should be true if resource is json, else false and you'll get text
-// callback function gets passed a json object if json===true, else text
+// parameters: url of resource to request, json bool, function to call with asyncData
+// isJson bool should be true if resource is json, else false and you'll get text
+// callback function gets passed a json object if isJson===true, else text
 // error callback gets passed the url that failed to load
 
 // callback example
@@ -15,38 +15,38 @@
 //     alert('Failed to load ' + url);
 // }
 
-function asyncGet(url, json, cb, errcb) {
+function asyncGet(url, isJson, cb, errcb) {
 	// var to contain async data
 	var asyncData;
 
-	// xhr object accessible in entire function
-	var xhr;
+	// asyncRequest object accessible in entire function
+	var asyncRequest;
 
-	// number of request attempts; call errcb after 20 unsuccessful attempts
+	// init number of request attempts; call errcb after 20 unsuccessful attempts
 	var attempts = 0;
 
 	// make async request
 	makeRequest(url);
 
 	function makeRequest(url) {
-		xhr = new XMLHttpRequest();
+		asyncRequest = new XMLHttpRequest();
 		// run prepdata when response received from server
-		xhr.onreadystatechange = prepData;
+		asyncRequest.onreadystatechange = prepData;
 		// send request
-		xhr.open('GET', url, true);
-		xhr.send();
+		asyncRequest.open('GET', url, true);
+		asyncRequest.send();
 	}
 
 	function prepData() {
-		// readyState 4 means xhr request successful and response received from server
+		// readyState 4 means asyncRequest successful and response received from server
 		// http status 200 means server OK'd response (200: "OK")
 		// note that status should be 0 when retrieving from filesystem (without HTTP server)
-		if (xhr.readyState === 4 && xhr.status === 200) {
-			if (json === true) { // if json
-				asyncData = JSON.parse(xhr.responseText);
-			} else if (json === false) { // if text
-				asyncData = xhr.responseText;
-			} else console.log('asyncGet(json) argument was not a bool');
+		if (asyncRequest.readyState === 4 && asyncRequest.status === 200) {
+			if (isJson === true) { // if json
+				asyncData = JSON.parse(asyncRequest.responseText); // parse json
+			} else if (isJson === false) { // if text
+				asyncData = asyncRequest.responseText;
+			} else console.log('Error in function [asyncGet]: argument [isJson] was not a bool');
 			// call a function that uses the data
 			cb(asyncData);
 		} else {
@@ -57,7 +57,7 @@ function asyncGet(url, json, cb, errcb) {
 				console.log('asyncGet(' + url + '): failed to load resource after ' + attempts + ' attempts. Will now call errcb if given.');
 				// call error cb with url
 				if (errcb && typeof(errcb) === "function") errcb(url);
-			} else return; // return, browser will try again
+			} else return;
 		}
 	}
 }
