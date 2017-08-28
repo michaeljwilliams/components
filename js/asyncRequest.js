@@ -16,14 +16,9 @@
 // }
 
 function asyncGet(url, isJson, cb, errcb) {
-	// var to contain async data
-	var asyncData;
-
-	// asyncRequest object accessible in entire function
-	var asyncRequest;
-
-	// init number of request attempts; call errcb after 20 unsuccessful attempts
-	var attempts = 0;
+    var asyncData,      // var to contain async data
+        asyncRequest,   // asyncRequest object accessible in entire function
+        attempts = 0;   // init number of request attempts; will call errcb after several unsuccessful attempts
 
 	// make async request
 	makeRequest(url);
