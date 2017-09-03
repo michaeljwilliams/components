@@ -117,24 +117,8 @@ textarea {
 
 a {
   transition: all 0.4s;
-  text-decoration: none;
 }
 
-a:link {
-  color: #FF00A0;
-}
-
-a:visited {
-  color: #FFA0C0;
-}
-
-a:hover {
-  color: #FFA0C0;
-}
-
-a:active {
-  color: #FFA0C0;
-}
 
 button,
 input,
