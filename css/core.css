@@ -1,0 +1,158 @@
+/* INIT ***********************************************************************/
+pre,textarea{overflow:auto}html,table{border-collapse:collapse}audio:not([controls]),template{display:none}details,main,summary{display:block}input[type=number]{width:auto}input[type=search]{-webkit-appearance:textfield}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}progress{display:inline-block}small{font-size:75%}[unselectable]{user-select:none}*,::after,::before{box-sizing:inherit;text-decoration:inherit;vertical-align:inherit;border-style:solid;border-width:0}*{color:inherit;font-family:inherit;font-size:inherit;font-style:inherit;line-height:inherit;border-collapse:inherit}*,:after,:before,body,html{margin:0;padding:0;outline:0;border:none}:root{-ms-overflow-style:-ms-autohiding-scrollbar;overflow-y:scroll;text-size-adjust:100%;box-sizing:border-box;cursor:default;font-family:sans-serif;line-height:1.5em;text-rendering:optimizeLegibility;vertical-align:top}a{text-decoration:none;border-bottom:dotted;}button,input,select,textarea{background:0 0}code,kbd,pre,samp{font-family:monospace,monospace}input{min-height:1.5em}nav ol,nav ul,ol,ul{list-style:none}select{-moz-appearance:none;-webkit-appearance:none}select::-ms-expand{display:none}select::-ms-value{color:currentColor}textarea{resize:vertical}::selection{color:#fff;background-color:#444;text-shadow:none}@media screen{[hidden~=screen]{display:inherit}[hidden~=screen]:not(:active):not(:focus):not(:target){clip:rect(0 0 0 0)!important;position:absolute!important}}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0;border:none}button{overflow:visible}table{border-spacing:0}:not(body){background-repeat:no-repeat;background-position:50%;background-size:cover}[hidden]{display:none!important}
+
+/* SIZE & POSITIONING *********************************************************/
+html, body {
+    height: 100%;
+}
+html {
+
+}
+body {
+    max-width: 42rem;
+}
+
+pre {
+    overflow: scroll;
+}
+
+li {
+    display: block; 
+}
+
+code {
+    display: block;
+    border-radius: .5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    overflow: scroll
+}
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code,
+p code,
+i code,
+a code,
+li code {
+    display: inline;
+    padding-left: .3rem;
+    padding-right: .3rem;
+    padding-top: .1rem;
+    padding-bottom: .1rem;
+    vertical-align: middle;
+    margin: 0;
+    border-radius: .3rem
+}
+
+/* FONTS **********************************************************************/
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li,
+i {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    word-wrap: break-word;
+}
+code {
+    font-family: "Menlo", "Lucida Console", monospace;
+    font-size: .9rem;
+    word-wrap: break-word;
+}
+body {
+    font-size: 1rem;
+}
+i,
+em {
+    font-style: italic;
+}
+
+/* LINKS **********************************************************************/
+
+a:link,
+.u-pseudoLink {
+    color: #006FFF;
+    border-bottom: 1px dotted;
+}
+
+a:hover,
+a:focus,
+a:active,
+.u-pseudoLink:hover,
+.u-pseudoLink:focus,
+.u-pseudoLink:active {
+    color: #006FFF;
+    border-bottom: 1px solid;
+}
+
+a:visited {
+    color: #8A8A8A;
+}
+
+/* COLOR **********************************************************************/
+body {
+    background-color: #0770EA;
+    background: linear-gradient(180deg, #078fea, #001a3a);
+}
+
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+    color: black;
+}
+
+code {
+    background-color: #222;
+    color: white;
+}
+
+/* SMALL SCREENS **************************************************************/
+@media (max-width: 30rem) {
+    html,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    li,
+    i {
+        font-size: 1rem;
+        font-weight: 400
+    }
+
+
+/* UTILITIES ******************************************************************/
+.u-left {
+    float: left;
+}
+.u-right {
+    float: right;
+}
+.u-center {
+    text-align: center;
+}
+.u-_isAbsent {
+    display: none;
+}
+.u-_isInvisible {
+    visibility: hidden;
+}
