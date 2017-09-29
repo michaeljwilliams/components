@@ -44,7 +44,9 @@ function asyncGet(url, isJson, cb, errcb) {
 				asyncData = asyncRequest.responseText;
 			} else console.log('Error in function [asyncGet]: argument [isJson] was not a bool');
 			// call a function that uses the data
-			cb(asyncData);
+			if(cb) {
+				cb(asyncData);
+			} else console.log('asyncGet(' + url + '): no callback was given);
 		} else {
 			attempts++;
 			console.log('asyncGet(' + url + '): No response received yet (attempt ' + attempts + '), retrying...');
