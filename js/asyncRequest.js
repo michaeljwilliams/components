@@ -1,7 +1,7 @@
 // Makes an XMLHttpRequest for a file, then runs a callback.
 // example
 // asyncGet('timeframe.json', useAsyncData, errorCallback);
-// parameters: url of resource to request, function to call with asyncData
+// parameters: url of resource to request, function to call with asyncData, error callback
 // error callback gets passed the url that failed to load
 
 // callback example
