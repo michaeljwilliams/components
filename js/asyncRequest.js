@@ -15,12 +15,7 @@
 // }
 
 function asyncGet(url, cb, errcb) { // Extra args will be passed to cb
-        
-    var asyncData,      // var to contain async data
-        xhr,            // xhr object accessible in entire function
-        cbArgs;         // Extra args are passed to cb
-
-    xhr = new XMLHttpRequest();
+    var xhr = new XMLHttpRequest();
     xhr.open("GET", url, true);
     xhr.send(null);
 
@@ -31,10 +26,10 @@ function asyncGet(url, cb, errcb) { // Extra args will be passed to cb
 
     xhr.onload = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            cb(xhr);	// Call a function that uses the data
+            cb(xhr.response);
         } else {
-            console.error(xhr.statusText);                     			// Log error to console
-            if(errcb && typeof(errcb) === "function") errcb(url);      	// Call errcb if given
+            console.error(xhr.statusText);      // Log error to console
+            if(errcb) errcb(url);               // Call errcb if given
         }
     };
 }
