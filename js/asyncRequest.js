@@ -21,14 +21,14 @@ function asyncGet(url, cb, errcb) { // Extra args will be passed to cb
 
     xhr.timeout = 10000;
     xhr.ontimeout = function() {
-        console.error("asyncGet: The request for " + url + " failed after 5 seconds.");
+        console.error("asyncGet: The request for " + url + " timed out after 5 seconds.");
     };
 
     xhr.onload = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             cb(xhr.response);
-        } else {
-            console.error(xhr.statusText);      // Log error to console
+        } else { // Log error to console
+            console.error("asyncGet: The request for " + url + " failed with error: " + xhr.statusText);
             if(errcb) errcb(url);               // Call errcb if given
         }
     };
