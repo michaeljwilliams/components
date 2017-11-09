@@ -1,225 +1,249 @@
 /* init.css - A normalize.css, reset.css, and sanitize.css mashup with some extras
- * contains initial properties and values for more easily starting web projects
- *
- * Michael J. Williams => me@mjwilliams.me
- *
- * MIT license.
+ * Contains initial properties and values for more easily starting web projects.
  */
-/*
- * Normalization
- */
-:root {
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  overflow-y: scroll;
-  text-size-adjust: 100%;
-}
 
-audio:not([controls]) {
-  display: none;
+/* INIT ***********************************************************************/
+pre,textarea{overflow:auto}html,table{border-collapse:collapse}audio:not([controls]),template{display:none}details,main,summary{display:block}input[type=number]{width:auto}input[type=search]{-webkit-appearance:textfield}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}progress{display:inline-block}small{font-size:75%}[unselectable]{user-select:none}*,::after,::before{box-sizing:inherit;text-decoration:inherit;vertical-align:inherit;border-style:solid;border-width:0}*{color:inherit;font-family:inherit;font-size:inherit;font-style:inherit;line-height:inherit;border-collapse:inherit}*,:after,:before,body,html{margin:0;padding:0;outline:0;border:none}:root{-ms-overflow-style:-ms-autohiding-scrollbar;overflow-y:scroll;text-size-adjust:100%;box-sizing:border-box;cursor:default;font-family:sans-serif;line-height:1.5em;text-rendering:optimizeLegibility;vertical-align:top}a{text-decoration:none;}button,input,select,textarea{background:0 0}code,kbd,pre,samp{font-family:monospace,monospace}input{min-height:1.5em}nav ol,nav ul, ol, ul{list-style:none}select{-moz-appearance:none;-webkit-appearance:none}select::-ms-expand{display:none}select::-ms-value{color:currentColor}textarea{resize:vertical}::selection{color:#fff;background-color:#444;text-shadow:none}@media screen{[hidden~=screen]{display:inherit}[hidden~=screen]:not(:active):not(:focus):not(:target){clip:rect(0 0 0 0)!important;position:absolute!important}}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0;border:none}button{overflow:visible}table{border-spacing:0}:not(body){background-repeat:no-repeat;background-position:50%;background-size:cover}[hidden]{display:none!important}
+sub, sup { 
+    vertical-align: baseline; 
+    font-size: 80%;
+    line-height: 0; 
+    position: relative;
+    text-decoration: none;
+    border: none;
 }
-
-details {
-  display: block;
+sup { 
+    top: -0.5rem; 
 }
-
-input[type="number"] {
-  width: auto;
+sub { 
+    bottom: -0.25rem; 
 }
-input[type="search"] {
-  -webkit-appearance: textfield;
-}
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-main {
-  display: block;
-}
-
-summary {
-  display: block;
-}
-
-pre {
-  overflow: auto;
-}
-
-progress {
-  display: inline-block;
-}
-
-small {
-  font-size: 75%;
-}
-
-template {
-  display: none;
-}
-
-textarea {
-  overflow: auto;
-}
-
-[hidden] {
-  display: none;
-}
-
-[unselectable] {
-  user-select: none;
-}
-
-/*
- * Universal inheritance
- */
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-  text-decoration: inherit;
-  vertical-align: inherit;
-}
-
-* {
-  color: inherit;
-  font-family: inherit;
-  font-size: inherit;
-  font-style: inherit;
-  line-height: inherit;
-}
-
-/*
- * Opinionated defaults
- */
-*,
-*::before,
-*::after {
-  border-style: solid;
-  border-width: 0;
-}
-
-*,
-*:before,
-*:after {
-  margin: 0;
-  padding: 0;
-  outline: none;
-  border: none;
-}
-
-:root {
-  box-sizing: border-box;
-  cursor: default;
-  font-family: sans-serif;
-  line-height: 1.5em;
-  text-rendering: optimizeLegibility;
-  vertical-align: top;
-}
-
-a {
-  transition: all 0.4s;
-}
-
-
-button,
-input,
-select,
-textarea {
-  background: transparent;
-}
-
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-}
-
-input {
-  min-height: 1.5em;
-}
-
-nav ol,
-nav ul {
-  list-style: none;
-}
-
-select {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-}
-select::-ms-expand {
-  display: none;
-}
-select::-ms-value {
-  color: currentColor;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-textarea {
-  resize: vertical;
-}
-
-::selection {
-  color: #FFFFFF;
-  background-color: #444444;
-  text-shadow: none;
-}
-
-@media screen {
-  [hidden~="screen"] {
-    display: inherit;
-  }
-
-  [hidden~="screen"]:not(:active):not(:focus):not(:target) {
-    clip: rect(0 0 0 0) !important;
-    position: absolute !important;
-  }
-}
-svg:not(:root) {
-  overflow: hidden;
-}
-
-/**
- * Known limitation: by default, Chrome and Safari on OS X allow very limited
- * styling of `select`, unless a `border` property is set.
- */
-/**
- * 1. Correct color not being inherited.
- *    Known issue: affects color of disabled elements.
- * 2. Correct font properties not being inherited.
- * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
- */
-button,
-input,
-optgroup,
-select,
-textarea {
-  color: inherit;
-  /* 1 */
-  font: inherit;
-  /* 2 */
-  margin: 0;
-  /* 3 */
-  border: none;
-}
-
 button {
-  overflow: visible;
+    cursor: pointer;
+}
+strong {
+    vertical-align: baseline;
 }
 
-textarea {
-  overflow: auto;
+/* DEFAULT FONTS **************************************************************/
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li,
+i,
+time,
+small {
+    font-family: "Open Sans", "Helvetica Neue", "Verdana", sans-serif;
+    word-wrap: break-word;
+    font-weight: 400;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+p,
+a:not(.u-link-reset),
+li,
+i,
+time {
+    line-height: 1.8rem;
+    font-size: 1.2rem;
 }
 
-ol, ul {
-  list-style: none;
+code {
+    font-family: "Menlo", "Lucida Console", monospace;
+    font-size: 1rem;
+    word-wrap: break-word;
 }
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code,
+p code,
+i code,
+a code,
+li code {
+    display: inline;
+    padding: .2rem .4rem;
+    vertical-align: baseline;
+    margin: 0;
+    border-radius: .3rem;
+    white-space: nowrap;
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+h1 {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+}
+h2 {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+}
+h3 {
+    font-size: 1.4rem;
+}
+
+/* DEFAULT LINKS **************************************************************/
+a:link:not(.u-link-reset) {
+    color: #006fff;
+    border-bottom: .15rem dotted;
+}
+a:hover:not(.u-link-reset),
+a:focus:not(.u-link-reset),
+a:active:not(.u-link-reset) {
+    color: #006fff;
+    border-bottom: .15rem solid;
+}
+a:visited:not(.u-link-reset) {
+    color: #8a8a8a;
+    border-bottom: .15rem dotted;
+}
+
+/* DEFAULT COLOR **************************************************************/
+html {
+    color: black;
+}
+body {
+    background-color: white;
+}
+
+code {
+    background-color: black;
+    color: #65ff46;
+}
+
+/* LAYOUT ETC *****************************************************************/
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+/* UTILITIES ******************************************************************/
+
+.u-position-relative {
+    position: relative;
+}
+
+.u-left {
+    float: left !important;
+}
+.u-right {
+    float: right !important;
+}
+.u-center {
+    text-align: center !important;
+}
+.u-text-align-right {
+    text-align: right;
+}
+
+.u-flex-justified {
+    display: flex;
+    justify-content: space-between;
+}
+
+.u-indent-left {
+    padding: 0 12pt;
+}
+.u-outdent-left{
+    text-indent: -12pt;
+    padding-left: 12pt;
+}
+
+.u-nowrap-phrase {
+    white-space: nowrap;
+}
+
+/* .u-link-reset: Resets the link to its inherited appearance, so it can be styled individually. */
+.u-link-reset{}
+
+/* Something that looks (and probably acts) like a link, but isn't really an <a> */
+.u-link-pseudo {
+    color: #006fff !important;
+    border-bottom: .15rem dotted !important;
+    cursor: pointer !important;
+}
+.u-link-pseudo:hover,
+.u-link-pseudo:focus,
+.u-link-pseudo:active {
+    border-bottom: .15rem solid !important;
+    cursor: pointer !important;
+}
+.u-link-pseudo-no-underline {
+    color: #006fff !important;
+    cursor: pointer !important;
+}
+
+/* Use for external links. Adds an icon to tell the user the URL is on a different site. */
+.u-link-external {
+    position: relative;
+    margin-right: 1rem;
+}
+.u-link-external::after {
+    content: "";
+    display: inline-block;
+    background: url(/img/iconSprite.svg);
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    background-size: auto 10px;
+    background-position: -30px 0;
+    position: absolute;
+    top: 20%;
+    right: -.8rem;
+}
+
+/* Button - simple */
+.u-button-simple {
+    border-radius: .5rem;
+    border: .2rem solid white;
+    color: white;
+    padding: .4rem;
+    background-color: #006fff;
+}
+
+
+
+/* State utility classes - these are meant to be added or removed to turn them on and off */
+
+/* Use to hide things AND remove them from document flow */
+.u-_is-absent {
+    display: none !important;
+}
+
+/* Use to hide things */
+.u-_is-invisible {
+    visibility: hidden !important;
+}
+
+/* Draw attention to something by giving it a yellow highlight background. */
+.u-_lookatme {
+    animation-name: lookatme;
+    animation-duration: 1.5s; 
+    animation-timing-function: linear; 
+    animation-iteration-count: 1;
+}
+    @keyframes lookatme {
+        0%,100% {
+            background-color: inherit;
+            color: inherit;
+        }
+        10%,80% {
+            background-color: #ffdd00;
+            color: black;
+        }
+    }
