@@ -44,19 +44,21 @@ small {
     font-weight: 400;
 }
 
+/* ROOT FONT SIZE */
 p,
 a:not(.u-link-reset),
 li,
 i,
 time {
-    line-height: 1.8rem;
     font-size: 1.2rem;
+    line-height: 1.8rem;
 }
 
 code {
     font-family: "Menlo", "Lucida Console", monospace;
-    font-size: 1rem;
+    font-size: 85%;
     word-wrap: break-word;
+    display: block;
 }
 h1 code,
 h2 code,
@@ -82,15 +84,16 @@ em {
 }
 
 h1 {
-    font-size: 2.4rem;
-    line-height: 3.6rem;
+    font-size: 200%;
+    line-height: 200%;
 }
 h2 {
-    font-size: 1.8rem;
-    line-height: 2.6rem;
+    font-size: 150%;
+    line-height: 150%;
 }
 h3 {
-    font-size: 1.4rem;
+    font-size: 125%;
+    line-height: 125%;
 }
 
 /* DEFAULT LINKS **************************************************************/
