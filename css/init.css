@@ -154,12 +154,13 @@ html, body {
     justify-content: space-between;
 }
 
+/* Indentation equal to paragraph line height */
 .u-indent-left {
-    padding: 0 12pt;
+    padding: 0 1.8rem;
 }
 .u-outdent-left{
-    text-indent: -12pt;
-    padding-left: 12pt;
+    text-indent: -1.8rem;
+    padding-left: 1.8rem;
 }
 
 .u-nowrap-phrase {
